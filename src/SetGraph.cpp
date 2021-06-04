@@ -11,11 +11,23 @@ int SetGraph::verticesCount() const {
 }
 
 std::vector<int> SetGraph::getNextVertices(int vertex) const {
-    return std::vector<int>();
+    assert(vertex < _verticesCount);
+    std::vector<int> result;
+    for (int child : _graph[vertex]) {
+        result.push_back(child);
+    }
+    return result;
 }
 
 std::vector<int> SetGraph::getPrevVertices(int vertex) const {
-    return std::vector<int>();
+    assert(vertex < _verticesCount);
+    std::vector<int> result;
+    for (int parent = 0; parent < verticesCount(); parent++) {
+        for (auto child : _graph[parent]) {
+            if (child == vertex) { result.push_back(parent); }
+        }
+    }
+    return result;
 }
 
 SetGraph::SetGraph(size_t verticesCount) : _graph(verticesCount), _verticesCount(verticesCount) {

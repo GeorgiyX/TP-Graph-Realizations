@@ -1,7 +1,8 @@
-#include <algorithm>
 #include <cassert>
 #include "ListGraph.h"
 #include "ArcGraph.h"
+#include "MatrixGraph.h"
+#include "SetGraph.h"
 
 void test() {
     std::vector<int> bfsOut;
@@ -32,6 +33,11 @@ void test() {
     ArcGraph arcGraph(listGraph);
     assert(listGraph == arcGraph && "ArcGraph");
 
+    SetGraph setGraph(arcGraph);
+    assert(arcGraph == setGraph && "SetGraph");
+
+    MatrixGraph matrixGraph(setGraph);
+    assert(setGraph == matrixGraph  && "SetGraph");
 }
 
 int main() {
