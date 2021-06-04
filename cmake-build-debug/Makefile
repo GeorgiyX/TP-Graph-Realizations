@@ -169,6 +169,33 @@ src/ArcGraph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Graphs.dir/build.make CMakeFiles/Graphs.dir/src/ArcGraph.cpp.s
 .PHONY : src/ArcGraph.cpp.s
 
+src/GraphInterface.o: src/GraphInterface.cpp.o
+
+.PHONY : src/GraphInterface.o
+
+# target to build an object file
+src/GraphInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Graphs.dir/build.make CMakeFiles/Graphs.dir/src/GraphInterface.cpp.o
+.PHONY : src/GraphInterface.cpp.o
+
+src/GraphInterface.i: src/GraphInterface.cpp.i
+
+.PHONY : src/GraphInterface.i
+
+# target to preprocess a source file
+src/GraphInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Graphs.dir/build.make CMakeFiles/Graphs.dir/src/GraphInterface.cpp.i
+.PHONY : src/GraphInterface.cpp.i
+
+src/GraphInterface.s: src/GraphInterface.cpp.s
+
+.PHONY : src/GraphInterface.s
+
+# target to generate assembly for a file
+src/GraphInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Graphs.dir/build.make CMakeFiles/Graphs.dir/src/GraphInterface.cpp.s
+.PHONY : src/GraphInterface.cpp.s
+
 src/ListGraph.o: src/ListGraph.cpp.o
 
 .PHONY : src/ListGraph.o
@@ -289,6 +316,9 @@ help:
 	@echo "... src/ArcGraph.o"
 	@echo "... src/ArcGraph.i"
 	@echo "... src/ArcGraph.s"
+	@echo "... src/GraphInterface.o"
+	@echo "... src/GraphInterface.i"
+	@echo "... src/GraphInterface.s"
 	@echo "... src/ListGraph.o"
 	@echo "... src/ListGraph.i"
 	@echo "... src/ListGraph.s"

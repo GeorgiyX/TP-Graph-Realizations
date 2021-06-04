@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Graphs.dir/src/ArcGraph.cpp.o"
+  "CMakeFiles/Graphs.dir/src/GraphInterface.cpp.o"
   "CMakeFiles/Graphs.dir/src/ListGraph.cpp.o"
   "CMakeFiles/Graphs.dir/src/MatrixGraph.cpp.o"
   "CMakeFiles/Graphs.dir/src/SetGraph.cpp.o"

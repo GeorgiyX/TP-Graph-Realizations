@@ -102,6 +102,9 @@
 		<Unit filename="/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/src/ArcGraph.cpp">
 			<Option target="Graphs"/>
 		</Unit>
+		<Unit filename="/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/src/GraphInterface.cpp">
+			<Option target="Graphs"/>
+		</Unit>
 		<Unit filename="/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/src/ListGraph.cpp">
 			<Option target="Graphs"/>
 		</Unit>
