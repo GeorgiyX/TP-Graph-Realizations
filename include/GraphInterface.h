@@ -18,11 +18,14 @@ struct IGraph {
     /** Возвращает список "родительских" вершин */
     virtual std::vector<int> getPrevVertices(int vertex) const = 0;
 
-    static void dfs(const IGraph &graph, const std::function<void(int)> &callback);
+    void dfs(const std::function<void(int)> &callback) const;
 
+    void bfs(const std::function<void(int)> &callback) const;
+
+    bool operator==(const IGraph &rhs) const;
 
 };
 
-
+bool sortAndCompare(std::vector<int> &lhs, std::vector<int> &rhs);
 
 #endif //GRAPHS_GRAPHINTERFACE_H

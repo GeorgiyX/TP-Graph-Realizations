@@ -9,14 +9,14 @@ public:
      * Сразу выделяет память на необходимое число вершин
      * @param verticesCount - число вершин
      */
-    ListGraph(size_t verticesCount);
+    explicit ListGraph(size_t verticesCount);
     /**
      * Из любого графа можно построить любой другой, используя getNextVertices и verticesCount
      * @param rhs
      */
-    ListGraph(const IGraph &rhs);
-    virtual ~ListGraph() = default;
+    explicit ListGraph(const IGraph &rhs);
 
+    ~ListGraph() override = default;
 
     void addEdge(int from, int to) override;
 
@@ -30,7 +30,6 @@ public:
 private:
     std::vector<std::vector<int>> _graph;
     size_t _verticesCount;
-
 };
 
 

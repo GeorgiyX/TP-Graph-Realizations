@@ -1,4 +1,4 @@
-#include <algorithm>
+#include <cassert>
 #include "ListGraph.h"
 
 ListGraph::ListGraph(size_t verticesCount) : _graph(verticesCount, std::vector<int>()),
@@ -7,6 +7,7 @@ ListGraph::ListGraph(size_t verticesCount) : _graph(verticesCount, std::vector<i
 }
 
 void ListGraph::addEdge(int from, int to) {
+    assert(from < _graph.size() && to < _graph.size());
     _graph[from].push_back(to);
 }
 
@@ -15,10 +16,12 @@ int ListGraph::verticesCount() const {
 }
 
 std::vector<int> ListGraph::getNextVertices(int vertex) const {
+    assert(vertex < _graph.size());
     return _graph[vertex];
 }
 
 std::vector<int> ListGraph::getPrevVertices(int vertex) const {
+    assert(vertex < _graph.size());
     std::vector<int> result;
     for (int parent = 0; parent < verticesCount(); parent++) {
         for (auto child : _graph[parent]) {
@@ -26,4 +29,11 @@ std::vector<int> ListGraph::getPrevVertices(int vertex) const {
         }
     }
     return result;
+}
+
+ListGraph::ListGraph(const IGraph &rhs) : _graph(rhs.verticesCount(), std::vector<int>()),
+                                          _verticesCount(rhs.verticesCount()) {
+    for (int i = 0; i < rhs.verticesCount(); ++i) {
+        _graph[i] = rhs.getNextVertices(i);
+    }
 }

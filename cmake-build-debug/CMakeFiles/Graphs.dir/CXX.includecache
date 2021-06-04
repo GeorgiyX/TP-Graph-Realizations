@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/GraphInterface.h
+vector
+-
+functional
+-
+
+../include/ListGraph.h
+GraphInterface.h
+-
+
+/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/include/ArcGraph.h
+GraphInterface.h
+-
+
+/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/src/ArcGraph.cpp
+../include/ArcGraph.h
+/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/include/ArcGraph.h
+
+/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/src/ListGraph.cpp
+cassert
+-
+ListGraph.h
+/media/adminu/7E3E8A493E89FA83/Users/Admin/Documents/Prog/C++/Graphs/src/ListGraph.h
+
